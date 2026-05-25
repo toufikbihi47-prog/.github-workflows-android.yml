@@ -26,7 +26,8 @@ jobs:
         run: npx cap sync android
 
       - name: Build APK
-        run: |
+        run: | npm install
+        shell: /usr/bin/bash -e {0}
           cd android
           chmod +x gradlew
           ./gradlew assembleDebug
