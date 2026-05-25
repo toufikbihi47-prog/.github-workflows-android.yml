@@ -27,9 +27,7 @@ jobs:
 
       - name: Build APK
         run: 
-        cd android
-          chmod +x gradlew
-          ./gradlew assembleDebug
+        cd android chmod +x gradlew.continue-on-error: env: /gradlew assembleDebug
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
