@@ -17,7 +17,11 @@ jobs:
 
       - name: Set up JDK
         uses: actions/setup-java@v4
+        with:      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
+          node-version: 22
+          # Remove the cache line below
           distribution: 'temurin'
           java-version: '17'
 
